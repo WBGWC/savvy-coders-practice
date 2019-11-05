@@ -1,6 +1,3 @@
-This is going to become a Text file suited for a macbook. 
-
-anything at all
+This intro file is the beginning of my understanding how how to use Git and Shell commands to use my computer more appropriately. 
 
 
-whyyyyyyyy
