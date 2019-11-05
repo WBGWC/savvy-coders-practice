@@ -1,35 +1,40 @@
 # Wallat Baban Practice Project
 
-## Second Header
+## Intro to Markdown language
 
-### even more header
+### The 'Behind the scenes' of HTML
 
-**This is very big bold**
+**Bold letters here, made possible with double astericks on both side of text**
 
-_This is in italics._
+_Italics made possible with 1 underscore on both sides of text._
 
-**_This is in both_**
+**_Best of both worlds_**
 
-~~This text is rendered with strikethrough.~~
+~~Best of no worlds.~~
 
-Sometimes you want to embed some \*stylized text\*
-right into **your paragraph.** Pretty cool, right!
+Just some \*stylized text\* here, with a backwards slash and astericks. Goes
+right into **your paragraph.** Pretty cool, right? 
 
-- Item
-- Item
-- Another item
+Passerby: "Sorta"!
 
-w/ sub-lists
+- An item (could be anything)
+- a bag of chips
+- 1 lb of fat. 
 
-1. Item one
-2. Item two
-3. Item three
-   1. Sub-item
-   2. Sub-item
-4. Item four
+w/ sublists that you can list under your lists. You list? 
 
----
+1. Item one: Milk
+2. Item two: Bread
+3. Item three: Eggs
+   1. Eggs of Eggs
+   2. Dinosaurd Eggs
+4. Dont buy any of these :D
 
-[I'm a link to a web page!](http://www.google.com)
+--- (seperation area from text)
+
+[I'm a link to a very common webpage! programmers and doctors alike use me ALL the time!](http://www.google.com)
 
 ![alt text](https://i.imgur.com/81qyN1y.jpg)
+
+The exclamation point only works on image and video files! They allow you to see the image in the preview of the Markdown!
+
