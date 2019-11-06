@@ -1,0 +1,24 @@
+{
+  "name": "cd",
+  "version": "1.0.0",
+  "description": "## Intro to Markdown language",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WBGWC/savvy-coders-practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WBGWC/savvy-coders-practice/issues"
+  },
+  "homepage": "https://github.com/WBGWC/savvy-coders-practice#readme",
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-prettier": "^3.1.1"
+  }
+}
