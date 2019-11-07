@@ -3,6 +3,7 @@ const myName = "Wallat Baban";
 // Template Literal
 console.log(`Hello World! this is ${myName}`);
 
+//This is an Object Literal
 const me = {
   name: "Wallat",
   age: 22,
