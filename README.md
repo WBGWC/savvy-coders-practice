@@ -32,7 +32,6 @@ w/ sublists that you can list under your lists. You list?
 
 --- (seperation area from text)
 
-[I'm a link to a very common webpage! programmers and doctors alike use me ALL the time!](http://www.google.com![alt text]https://i.imgur.com/81qyN1y.jpg)
+[I'm a link to a very common webpage! programmers and doctors alike use me ALL the time!] (![alt text]<https://i.imgur.com/81qyN1y.jpg http://www.google.com>)
 
 The exclamation point only works on image and video files! They allow you to see the image in the preview of the Markdown!
-
