@@ -79,7 +79,7 @@ while(currentNum <= 10) {
 console.log(currentTotal);
 
 //For loops
-Refactoring - rewrite the code for better readability or performance w/o affecting the functionality
+//Refactoring - rewrite the code for better readability or performance w/o affecting the functionality
 
 let currentTotal = 0
 
@@ -89,10 +89,7 @@ for(let i = 1; i <= 10; i += 1) {
   currentTotal += 1; //currenTotal = currentTotal + i;
   console.log('currentTotal is', currentTotal);
   }
-
   return currentTotal;
-}
-console.log(numberSummer());
 
 
 //Named Parameters allow functions to receive additional information to complete a task
@@ -102,7 +99,7 @@ function numberSummer(startingValue = 1, endingValue = 10) {
 
   //Initializer; Exit Condition; Iterator
   for(let i = startingValue; i <= endingValue; i += 1) {
-    currentTotal += i; //currenTotal = currentTotal + i;
+    currentTotal += i; //currentTotal = currentTotal + i;
     }
     return currentTotal;
   }
