@@ -128,12 +128,12 @@ function numberSummer(startingValue = 1, endingValue = 10) {
 
 //THE CODE BELOW IS FROM MANAV FOR HW3
 const me = {
-  name: "manav"
+  name: "manav",
   name: 'mark',
-}		   age: 3,
-  homework: {
-    hw1: "passed",
-    hw2: "failed",
+  age: 3,
+    homework: {
+      hw1: "passed",
+      hw2: "failed",
   },
   // Method
   checkDrinkingAge: function() {
@@ -193,3 +193,64 @@ function numberSummer(startingValue = 0, endingValue = 10) {
     return otherTotal;
 } //we invoke functions and can pass in arguments that 'match up' to the named parameters
 console.log(numberSummer());
+
+// HW 3 Solution******** HIGHLY IMPORTANT
+
+/*Create an object literal. This object literal could be named numberSummerMachine .
+*numberSummerMachine should have 🔑s for startingNumber and endingNumber . numberSummerMachine *should have a method - perhaps called sumDaNumbers . This method should use the current value of *its startingNumber and endingNumber and it should use looping (either while or for ) to return the *'sum of the numbers.'
+*
+*Note that `startingNumber` and `endingNumber` can be set as whatever values you want, but it's *just done 'manually.'
+
+*HINT: You will need to use this inside of the function to access the properly scoped 🔑s.
+*/
+//Doesnt need a scope of name parameters, so doesnt need startingNumber and endingNumber in the functions brackets.
+
+// This is called Encapsulation
+const numberSummerMachine = {
+  startingNumber: 1,
+  endingNumber: 123,
+  sumDaNumbers: function() {
+    let total  = 0;
+
+    for(let i = this.startingNumber; i <= this.endingNumber; i+=1) {
+      total += i;
+    }
+    return total;
+  },
+  // This setter allows for updating of the 'local data'
+  //the bottom is a function without saying : function
+  setStartingNumber(num) {
+    this.startingNumber = num;
+  }
+};
+//This makes the starting number 5
+numberSummerMachine.setStartingNumber(5);
+
+console.log(numberSummerMachine.sumDaNumbers());
+
+
+
+// This is called Encapsulation and for a While Loop
+const numberSummerMachine = {
+  startingNumber: 1,
+  endingNumber: 123,
+  sumDaNumbers: function() {
+    let total  = 0;
+    let i = this.startingNumber;
+
+    while (i <= this.endingNumber) {
+      total += i;
+      i += 1;
+    }
+    return total;
+  },
+  // This setter allows for updating of the 'local data'
+  //the bottom is a function without saying : function
+  setStartingNumber(num) {
+    this.startingNumber = num;
+  }
+};
+//This makes the starting number 5
+numberSummerMachine.setStartingNumber(5);
+
+console.log(numberSummerMachine.sumDaNumbers());
