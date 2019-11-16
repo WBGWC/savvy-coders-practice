@@ -1,23 +1,30 @@
-function foo() {
-  console.trace();
-  bar();
-  console.trace();
+// Week 2, Day 1
+const myName = "Wallat Baban";
 
-  return "foo";
-}
+// Template Literal
+console.log(`Hello World! this is ${myName}`);
 
-function bar() {
-  console.trace();
-  baz();
-  console.trace();
+//This is an Object Literal
+const me = {
+  name: "Wallat",
+  age: 22,
+  isTruth: true,
+  maxIq: 160,
+  weight: 190
 
-  return "bar";
-}
+};
 
-function baz() {
-  console.trace();
+//We are using Bracket Notation
+console.log(me["name"]);
 
-  return "baz";
-}
+//This is Dot Notation
+console.log(me.age);
 
-console.log(foo());
+/**
+ * All of this is going to be a comment
+ * No worries as this will never show up in the program
+ *
+ *
+ *
+ *
+ *

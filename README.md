@@ -12,7 +12,7 @@ _Italics made possible with 1 underscore on both sides of text._
 
 ~~Best of no worlds.~~
 
-Just some \*stylized text\* here, with a backwards slash and astericks. Goes
+Just some \*stylized text\* here, with a backwards slash and asterisks. Goes
 right into **your paragraph.** Pretty cool, right?
 
 Passerby: "Sorta"!
@@ -27,7 +27,7 @@ w/ sublists that you can list under your lists. You list?
 2. Item two: Bread
 3. Item three: Eggs
    1. Eggs of Eggs
-   2. Dinosaurd Eggs
+   2. Dinosaur Eggs
 4. Dont buy any of these :D
 
 --- (seperation area from text)
