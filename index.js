@@ -1,35 +1,32 @@
-//*HW 4 Solution
+//*Exponential
 
-//*11/14/2019***********
-function initGreeting(name,greeting) {
-  return function(time) {
-    return `${name} ${greeting} The time is ${time}` //This is a template literal and is much more useful. You can put anything in between the first $ and bracket and second one.
+//* This is a function returning 8 using a For loop.
+function myPow(num, exp) {
+  let ret = num
+  for (let i = 1; i < exp; i += 1) {
+    ret *= num;
   }
+  return ret;
 }
 
-const helloWallat = initGreeting("Wallat" , "Evening");
+console.log(myPow(2, 3));
 
-const time = new Date(Date.now());
-console.log(helloWallat(`{time.getHours()}:${time.getMinutes()}`))
-
-//***********Create a loop of 'All work and no play makes jack a dull boy, 100 times.
-function writePsychoBook(num){
-  let str = "";
-  for(let i = 0; i <= num; i+=1){
-      str += "All work and no play makes jack a dull boy!" ;
-    }
-    return str;
+ //* The below is a recursion returning 8
+function myPow(num, exp) {
+  if(ret === 2) {
+    ret *= num;
   }
+  return `${myPow(2, 3)}`;
+}
+console.log(myPow(2, 3));
 
-  //RECURSION
-function writePsychoBook(n) {
-  if(n === 0) {
-    return "";
+//* Correct Recursion Solution
+
+function myPow(num, exp) {
+  if (exp === 0) {
+    return 1;
   }
-
-  return `All work and no play makes jack a dull boy ${writePsychoBook(n - 1)}`;
+  return (num *= myPow(num, exp - 1));
 }
 
-console.log(writePsychoBook(99));
-
-console.log(Math.pow(2, 3)); //* This is a exponential function for 2 * 2 * 2
+console.log(myPow(2, 3));
