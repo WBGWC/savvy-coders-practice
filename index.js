@@ -1,15 +1,22 @@
-//* 11.15.2019
-function initPerson(fname, lname, age) {
-  return {
-    fname,
-    lname,
-    age,
-    canDrink() {
-      age >= 21;
+const students = ["Andrew","Billy","George","Heather","Madison","Marque","Martin","Nikki","Oscar","RhondaLyn","Sidney","Tracie","Wallat"];
+
+//arr can be any array of names
+function getMs(namesArr) {
+  const mNames = [];
+  for(let i = 0; i < namesArr.length; i += 1) {
+    if (namesArr[i].startsWith("M")) {
+      mNames.push(namesArr[i]);
     }
-  };
+  }
+  return mNames;
 }
 
-const me = initPerson("manav", "misra", 13);
-console.log(me);
-console.log(me.canDrink());
+// Used the URL: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+}
+
+console.log(students[getRandomInt(0, students.length - 1)]);
+console.log(getMs(students));
