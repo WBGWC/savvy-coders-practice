@@ -1,30 +1,35 @@
-//Moduleas operator = %
-// Comparison Operators: ===, >=, <=
+//*HW 4 Solution
 
-
-// Logical Operators are these:
-const x = 3;
-const y = 5;
-const z = 10;
-
-//Logical operators involve AND and OR conditions
-// And operator checks both the left and right operands must be true
-console.log(x < y && x < z);
-
-// Or operator is if the left operator is true, right is never evaluated.
-// || allows us to do short circuiting;
-console.log(x < y || x < z);
-
-//*Example of old way to short circuit.
-/*function numberSummer(start, end);
-/*let s = start || 1;
-*/
-
-function  highOrLow(x, y) {
-  if (x > y) {
-    return "x is more";
+//*11/14/2019***********
+function initGreeting(name,greeting) {
+  return function(time) {
+    return `${name} ${greeting} The time is ${time}` //This is a template literal and is much more useful. You can put anything in between the first $ and bracket and second one.
   }
-//The below is called Short Circuiting :D
-  return "y is more";
 }
-console.log(highOrLow(3, 5));
+
+const helloWallat = initGreeting("Wallat" , "Evening");
+
+const time = new Date(Date.now());
+console.log(helloWallat(`{time.getHours()}:${time.getMinutes()}`))
+
+//***********Create a loop of 'All work and no play makes jack a dull boy, 100 times.
+function writePsychoBook(num){
+  let str = "";
+  for(let i = 0; i <= num; i+=1){
+      str += "All work and no play makes jack a dull boy!" ;
+    }
+    return str;
+  }
+
+  //RECURSION
+function writePsychoBook(n) {
+  if(n === 0) {
+    return "";
+  }
+
+  return `All work and no play makes jack a dull boy ${writePsychoBook(n - 1)}`;
+}
+
+console.log(writePsychoBook(99));
+
+console.log(Math.pow(2, 3)); //* This is a exponential function for 2 * 2 * 2
