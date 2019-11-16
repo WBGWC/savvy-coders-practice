@@ -1,30 +1,33 @@
-// Week 2, Day 1
-const myName = "Wallat Baban";
+// Day 2 - Week 3
+const robot = {
+  name = "Wally the Robot",
+  age = 23,
+  job: {
+  cleaning: true,
+  organizing: true,
+},
 
-// Template Literal
-console.log(`Hello World! this is ${myName}`);
-
-//This is an Object Literal
-const me = {
-  name: "Wallat",
-  age: 22,
-  isTruth: true,
-  maxIq: 160,
-  weight: 190
-
+// This is a method below
+  checkJobCompletion: function() {
+    //The bottom is a Getter
+    return this.job.cleaning === true;
+    //The above is not necessarily useful.
+  }
 };
+// This is Coercion
 
-//We are using Bracket Notation
-console.log(me["name"]);
+let x = 32;
+let y = "32";
 
-//This is Dot Notation
-console.log(me.age);
+//*//JS defaults to coercing numbers into strings
+////when //*// is used it crosses out the entire thing you wrong.
 
-/**
- * All of this is going to be a comment
- * No worries as this will never show up in the program
- *
- *
- *
- *
- *
+console.log(x == y);
+// This is to coerce for sure and not to make the two completely and definitively equal.
+
+//Adding numbers 1-10
+/*
+Create a loop that starts at 1 and ends at 10.
+Keep track of the current count.
+Keep track of the running total
+*/
