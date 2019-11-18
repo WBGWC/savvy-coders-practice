@@ -5,6 +5,12 @@ const students = [["Andrew","Billy","George","Heather","Madison","Marque","Marti
 console.log(myArr[0].length) //This is for when an array is nested like the above to access the length of the inner array.
 
 
+
+
+
+
+
+
 //* The application we are making ************************************
 const students = ["Andrew","Billy","George","Heather","Madison","Marque","Martin","Nikki","Oscar","RhondaLyn","Sidney","Tracie","Wallat"];
 
@@ -30,6 +36,9 @@ console.log(students[getRandomInt(0, students.length - 1)]);
 console.log(getMs(students));
 
 //* End of Web Application ******************************************
+
+
+
 
 
 
