@@ -1,22 +1,20 @@
-const students = ["Andrew","Billy","George","Heather","Madison","Marque","Martin","Nikki","Oscar","RhondaLyn","Sidney","Tracie","Wallat"];
-
-//arr can be any array of names
-function getMs(namesArr) {
-  const mNames = [];
-  for(let i = 0; i < namesArr.length; i += 1) {
-    if (namesArr[i].startsWith("M")) {
-      mNames.push(namesArr[i]);
+function initFizzBuzz(num1, num2){
+  for (let i = 1; i <= 100; i += 1) {
+    if(i % num1 === 0 && i % num2 === 0) {
+      console.log('FizzBuzz');
+    } else if (i % num2 === 0) {
+      console.log('buzz');
+    } else if (i % num1 === 0) {
+      console.log('fizz');
+    } else {
+      console.log(i);
     }
   }
-  return mNames;
 }
 
-// Used the URL: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
-function getRandomInt(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
-}
+const fizzBuzz46 = initFizzBuzz(4, 6);
 
-console.log(students[getRandomInt(0, students.length - 1)]);
-console.log(getMs(students));
+console.log(fizzBuzz46());
+
+
+//********* HW 5 Solution */
