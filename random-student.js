@@ -11,6 +11,9 @@ console.log(myArr[0].length) //This is for when an array is nested like the abov
 
 
 
+
+
+
 //* The application we are making ************************************
 const students = ["Andrew","Billy","George","Heather","Madison","Marque","Martin","Nikki","Oscar","RhondaLyn","Sidney","Tracie","Wallat"];
 
