@@ -1,240 +1,169 @@
-const people = [
-  {
-    id: 1,
-    name: "Leanne Graham",
-    username: "Bret",
-    email: "Sincere@april.biz",
-    address: {
-      street: "Kulas Light",
-      suite: "Apt. 556",
-      city: "Gwenborough",
-      zipcode: "92998-3874",
-      geo: {
-        lat: "-37.3159",
-        lng: "81.1496"
-      }
-    },
-    phone: "1-770-736-8031 x56442",
-    website: "hildegard.org",
-    company: {
-      name: "Romaguera-Crona",
-      catchPhrase: "Multi-layered client-server neural-net",
-      bs: "harness real-time e-markets"
-    }
-  },
-  {
-    id: 2,
-    name: "Ervin Howell",
-    username: "Antonette",
-    email: "Shanna@melissa.tv",
-    address: {
-      street: "Victor Plains",
-      suite: "Suite 879",
-      city: "Wisokyburgh",
-      zipcode: "90566-7771",
-      geo: {
-        lat: "-43.9509",
-        lng: "-34.4618"
-      }
-    },
-    phone: "010-692-6593 x09125",
-    website: "anastasia.net",
-    company: {
-      name: "Deckow-Crist",
-      catchPhrase: "Proactive didactic contingency",
-      bs: "synergize scalable supply-chains"
-    }
-  },
-  {
-    id: 3,
-    name: "Clementine Bauch",
-    username: "Samantha",
-    email: "Nathan@yesenia.net",
-    address: {
-      street: "Douglas Extension",
-      suite: "Suite 847",
-      city: "McKenziehaven",
-      zipcode: "59590-4157",
-      geo: {
-        lat: "-68.6102",
-        lng: "-47.0653"
-      }
-    },
-    phone: "1-463-123-4447",
-    website: "ramiro.info",
-    company: {
-      name: "Romaguera-Jacobson",
-      catchPhrase: "Face to face bifurcated interface",
-      bs: "e-enable strategic applications"
-    }
-  },
-  {
-    id: 4,
-    name: "Patricia Lebsack",
-    username: "Karianne",
-    email: "Julianne.OConner@kory.org",
-    address: {
-      street: "Hoeger Mall",
-      suite: "Apt. 692",
-      city: "South Elvis",
-      zipcode: "53919-4257",
-      geo: {
-        lat: "29.4572",
-        lng: "-164.2990"
-      }
-    },
-    phone: "493-170-9623 x156",
-    website: "kale.biz",
-    company: {
-      name: "Robel-Corkery",
-      catchPhrase: "Multi-tiered zero tolerance productivity",
-      bs: "transition cutting-edge web services"
-    }
-  },
-  {
-    id: 5,
-    name: "Chelsey Dietrich",
-    username: "Kamren",
-    email: "Lucio_Hettinger@annie.ca",
-    address: {
-      street: "Skiles Walks",
-      suite: "Suite 351",
-      city: "Roscoeview",
-      zipcode: "33263",
-      geo: {
-        lat: "-31.8129",
-        lng: "62.5342"
-      }
-    },
-    phone: "(254)954-1289",
-    website: "demarco.info",
-    company: {
-      name: "Keebler LLC",
-      catchPhrase: "User-centric fault-tolerant solution",
-      bs: "revolutionize end-to-end systems"
-    }
-  },
-  {
-    id: 6,
-    name: "Mrs. Dennis Schulist",
-    username: "Leopoldo_Corkery",
-    email: "Karley_Dach@jasper.info",
-    address: {
-      street: "Norberto Crossing",
-      suite: "Apt. 950",
-      city: "South Christy",
-      zipcode: "23505-1337",
-      geo: {
-        lat: "-71.4197",
-        lng: "71.7478"
-      }
-    },
-    phone: "1-477-935-8478 x6430",
-    website: "ola.org",
-    company: {
-      name: "Considine-Lockman",
-      catchPhrase: "Synchronised bottom-line interface",
-      bs: "e-enable innovative applications"
-    }
-  },
-  {
-    id: 7,
-    name: "Kurtis Weissnat",
-    username: "Elwyn.Skiles",
-    email: "Telly.Hoeger@billy.biz",
-    address: {
-      street: "Rex Trail",
-      suite: "Suite 280",
-      city: "Howemouth",
-      zipcode: "58804-1099",
-      geo: {
-        lat: "24.8918",
-        lng: "21.8984"
-      }
-    },
-    phone: "210.067.6132",
-    website: "elvis.io",
-    company: {
-      name: "Johns Group",
-      catchPhrase: "Configurable multimedia task-force",
-      bs: "generate enterprise e-tailers"
-    }
-  },
-  {
-    id: 8,
-    name: "Nicholas Runolfsdottir V",
-    username: "Maxime_Nienow",
-    email: "Sherwood@rosamond.me",
-    address: {
-      street: "Ellsworth Summit",
-      suite: "Suite 729",
-      city: "Aliyaview",
-      zipcode: "45169",
-      geo: {
-        lat: "-14.3990",
-        lng: "-120.7677"
-      }
-    },
-    phone: "586.493.6943 x140",
-    website: "jacynthe.com",
-    company: {
-      name: "Abernathy Group",
-      catchPhrase: "Implemented secondary concept",
-      bs: "e-enable extensible e-tailers"
-    }
-  },
-  {
-    id: 9,
-    name: "Glenna Reichert",
-    username: "Delphine",
-    email: "Chaim_McDermott@dana.io",
-    address: {
-      street: "Dayna Park",
-      suite: "Suite 449",
-      city: "Bartholomebury",
-      zipcode: "76495-3109",
-      geo: {
-        lat: "24.6463",
-        lng: "-168.8889"
-      }
-    },
-    phone: "(775)976-6794 x41206",
-    website: "conrad.com",
-    company: {
-      name: "Yost and Sons",
-      catchPhrase: "Switchable contextually-based project",
-      bs: "aggregate real-time technologies"
-    }
-  },
-  {
-    id: 10,
-    name: "Clementina DuBuque",
-    username: "Moriah.Stanton",
-    email: "Rey.Padberg@karina.biz",
-    address: {
-      street: "Kattie Turnpike",
-      suite: "Suite 198",
-      city: "Lebsackbury",
-      zipcode: "31428-2261",
-      geo: {
-        lat: "-38.2386",
-        lng: "57.2232"
-      }
-    },
-    phone: "024-648-3804",
-    website: "ambrose.net",
-    company: {
-      name: "Hoeger LLC",
-      catchPhrase: "Centralized empowering task-force",
-      bs: "target end-to-end models"
-    }
-  }
-];
+// class User{
+// constructor(fname, lname, email, currentlvl, exptonxtlvl) {
+//   this.fname = fname;
+//   this.lname = lname;
+//   this.email = email;
+//   this.currentlvl = currentlvl;
+//   this.exptonxtlvl = exptonxtlvl;
+// }
 
-const dataWithStateOfMO = people.map(person => {
-  person.address.st = "Missouri";
-  return person;
+// get bio() {
+//     return `I am Player ${this.fullName()}. `;
+//   }
+
+// get level() {
+//   if (this.currentlvl < 100) {
+//     return `Exp to next level: ${this.exptonxtlvl}`;
+//   }
+// return "You still need keep training";
+// }
+
+// get fullName() {
+//   return `Your name is ${this.fname} ${this.lname}`;
+// }
+
+// /**
+//    * @param {any} newLName
+//    */
+// set changeName(newLName) {
+//   if(newLName) {
+//   this.lname = newLName;
+//   } else {
+//     console.error("bad name received");
+//   }
+// }
+// }
+// const u = new User('Mike', 'Johnson', 'WBGWC@mail.umsl.edu', 18, 100)
+// u.changeName = "Matt"
+// console.log(u);
+
+// class WarriorPlayer extends User {
+//   constructor(fname, lname, email, currentlvl, exptonxtlvl, warriorid){
+//     super(fname, lname, email, currentlvl, exptonxtlvl);
+//     this.id = warriorid;
+// };
+// get bio() {
+//   return "Welcome to the game!";
+// }
+
+// get warriorid() {
+//   return `Your Player id is ${this.id}`;
+// }
+// set warriorid(id) {
+//   this.id = id;
+// }
+// }
+// const war = new WarriorPlayer("Elton", "John", "ABC@gmail.com", 1, 100, 2310);
+// war.warriorid = 2309
+// console.log(war);
+// console.log(war.bio)
+// console.log(war.warriorid)
+
+// // //Getter
+
+// // Person.prototype.getFaveGames = function() {
+// //   //Just create some string here that we can update
+// //   let gamesList = `Here are the favorite games for ${this.fullName()}`;
+
+// //   for (let i = 0; i <this.favGames.length; i+= 1) {
+// //     //Just concatenate the string same as we can do with the numbers.
+// //     gameList += `$(i + 1) - ${this.favGames[i]}`;
+// //   }
+// //   return gamesList;
+// // }
+
+// // function User(fname, lname, currentlvl, exptonxtlvl) {
+// //   this.fname = fname,
+// //   this.lname = lname,
+// //   this.currentlvl = currentlvl,
+// //   this.exptonxtlvl = exptonxtlvl;
+
+// // }
+
+// // User.prototype.setSkills = function(newSkill) {
+
+// //   this.userSkills = newSkill
+
+// // };
+
+// // User.prototype.getSkills = function() {
+// //   let skillsList = `Here are my skills `
+// //   for(let i = 0; i < this.userSkills.length; i+=1){
+// //     skillsList += `${this.userSkills [i]}
+// //     `;
+// //   }
+// //   return skillsList
+// // }
+
+// // // this.canLvl = function() {
+// // //   if(this.currentlvl <= 100) {
+// // //     return `Exp to next level: ${this.exptonxtlvl}`;
+// // //   }
+
+// // // this.getFullName = function() {
+// // //   return `${this.fname} ${this.lname}`;
+// // //   };
+// // // }
+
+// // const pla = new User("WBGWC", "Asin", 10,  1218);
+// // console.log(pla);
+// // const skills = ["highjump", "roll"]
+// // pla.setSkills(skills)
+// // console.log(pla);
+// // console.log(pla.getSkills());
+
+// // //console.log(pla.getBio())
+
+const numbers = [1, 2, 3, 4, 5, 6];
+const strings = [
+  "hello",
+  "world",
+  "It ya boy Tyrone, coming at you live from LA."
+];
+//concat is ideal b/c it doesn't mutate the original data
+const numbersAndStrings = numbers.concat(strings);
+//forEach needs to know what it should do for each element - callback fxn
+//number is similar to doing numbers[i] in our traditional for loop
+
+//Arrow Syntax DOES NOT have any THIS reference
+// const results = numbers.map(number => {
+//   return number + 1;
+// });
+
+strings.forEach(string => {
+  console.log("string is", string);
 });
 
-console.log(people);
-console.log(dataWithStateOfMO);
+function updateNumbersAndStrings(officialArr, stringUpdate, numberUpdate) {
+  return officialArr.map(el => {
+    if (typeof el === "string") {
+      return (el += stringUpdate);
+    }
+    if (typeof el === "number") {
+      return (el += numberUpdate);
+    }
+  });
+}
+console.log(updateNumbersAndStrings(numbersAndStrings, "hello", 236));
+//Map will ALWAYS return an array with matching length and returns something.
+
+//   console.log("current element is", el);
+//   if (typeof el === "string") {
+//     updatedNumbersAndStrings.push((el += stringUpdate));
+//   } else {
+//     updatedNumbersAndStrings.push((el += numberUpdate));
+//   }
+
+//   for (let i = 0; i < officialArr.length; i += 1) {
+//     if (typeof officialArr[i] === "string") {
+//       updatedNumbersAndStrings.push((officialArr[i] += stringUpdate));
+//     } else {
+//       updatedNumbersAndStrings.push((officialArr[i] += numberUpdate));
+//     }
+//   }
+//   return updatedNumbersAndStrings;
+// }
+
+// console.log("numbers is", numbers);
+// console.log("strings is", strings);
+// // console.log("arr is", officialArr);
