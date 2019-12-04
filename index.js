@@ -231,50 +231,81 @@ const users = [
   }
 ];
 
-// // const shortenedData = users.map(user => ({
-// //   name: user.name,
-// //   address: user.address,
-// //   phone: user.phone
-// // }));
+// //Below is Nesting an array within another array
+// function mergeCompanies(data, acquiringCompany, acquiredCompany) {
+//   return data.map(d => {
+//     if (d.company.name === acquiredCompany) {
+//       d.company.name = acquiredCompany;
+//     }
+//     return d;
+//   });
+// }
+// const updatedUsersCompany = mergeCompanies(
+//   users,
+//   "Yost and Sons",
+//   "Hoeger LLC"
+// );
+// console.log(updatedUsersCompany);
 
-// const shortenedData = users.map(({ fname, lname address, phone }) => ({
-//   "name": `${fname} ${lname}`
+// // Below filtering for one type of data
+// function getUsersForCompany(data, companyName) {
+//   return data.filter(d => d.company.name === companyName);
+// }
+// const hoegerUsers = getUsersForCompany(users, "Hoeger LLC");
+// console.log(hoegerUsers);
+
+// // Using Filter and then chaining map for extra info such as name, address, and phone
+// function getUsersForCompany(data, companyName) {
+//   return data.filter(d => d.company.name === companyName);
+// }
+// .map(data => data.companyName.);
+// const hoegerUsers = getUsersForCompany(users, "Yost and Sons").map(({name, address, phone}) => ({
+//   name,
 //   address,
 //   phone
+// })
+// );
+// console.log(hoegerUsers);
+
+// //Mapping users and then company names for each user, without destructuring
+// const directories = users.map(user => {
+//     return {
+//       [`${user.company.name}`]: getUsersForCompany(users, user.company.name)
+//     };
+//   }
+
+// //Mapping users and then company names for each user, without destructuring, but shorter
+// const directories = users.map(user => ({
+//   [`${user.company.name}`]: getUsersForCompany(users, user.company.name)
 // }));
 
-// //Without Deconstruction
-// const shortenedData = users.map(user => ({
-//   "name": user.name,
-//   "company": user.company
-// }));
+const directories = users.map(({ company }) => ({
+  [`${company.name}`]: getUsersForCompany(users, company.name)
+}));
 
-// With deconstruction
-// const userCompanyInfo = users
-//   .map(({ name, company }) => ({
-//     name,
-//     companyName: company.name
-//   }))
-//   .filter(user => user.companyName.startsWith("B"));
-
-// console.log(userCompanyInfo);
-
-function stripDataForSpecifiedFields(data, keys) {
-  //Data is referencing Users
-  //Keys will map for every piece of data
-  return data.map(d =>
-    keys.map(key => {
-      return {
-        [key]: d[key]
-        //d is referencing a single data for user
-      };
-    })
-  );
+function getUsersForCompany(data, companyName) {
+  return data.fileter(d => d.company.name === companyName);
 }
 
-const userNameAndPhones = stripDataForSpecifiedFields(users, [
-  "name",
-  "phone",
-  "address"
-]);
-console.log(userNameAndPhones);
+directories.forEach(directory => {
+  console.log(directory);
+});
+// //Below is an example of a change in an array without destructer
+// const updatedUsersCompany = users.map(company => {
+//   if (users.company.name === "Hoeger LLC") {
+//     users.company.name = "Yost and Sons";
+//   }
+//   return user;
+// });
+// console.log(updatedUsersCompany);
+
+// //Below is an example of a change in an array with destructor
+// const updatedUsersCompany = users.map(({company}) => {
+//   if (company.name === "Hoeger LLC") {
+//     company.name = "Yost and Sons";
+//   }
+//   return company;
+// });
+// console.log(updatedUsersCompany);
+
+// const updatedUsersCompany = mergeCompanies(users, "Yost and Sons", "Hoeger, LLC");
