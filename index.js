@@ -1,4 +1,4 @@
-const people = [
+const users = [
   {
     id: 1,
     name: "Leanne Graham",
@@ -231,5 +231,50 @@ const people = [
   }
 ];
 
-const bizEmails = people.filter(person => person.email.endsWith("biz"));
-console.log(bizEmails);
+// // const shortenedData = users.map(user => ({
+// //   name: user.name,
+// //   address: user.address,
+// //   phone: user.phone
+// // }));
+
+// const shortenedData = users.map(({ fname, lname address, phone }) => ({
+//   "name": `${fname} ${lname}`
+//   address,
+//   phone
+// }));
+
+// //Without Deconstruction
+// const shortenedData = users.map(user => ({
+//   "name": user.name,
+//   "company": user.company
+// }));
+
+// With deconstruction
+// const userCompanyInfo = users
+//   .map(({ name, company }) => ({
+//     name,
+//     companyName: company.name
+//   }))
+//   .filter(user => user.companyName.startsWith("B"));
+
+// console.log(userCompanyInfo);
+
+function stripDataForSpecifiedFields(data, keys) {
+  //Data is referencing Users
+  //Keys will map for every piece of data
+  return data.map(d =>
+    keys.map(key => {
+      return {
+        [key]: d[key]
+        //d is referencing a single data for user
+      };
+    })
+  );
+}
+
+const userNameAndPhones = stripDataForSpecifiedFields(users, [
+  "name",
+  "phone",
+  "address"
+]);
+console.log(userNameAndPhones);
